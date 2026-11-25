@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation — Luca Tools</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23e6e7e9'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='18' font-weight='700' text-anchor='middle' fill='%2308090a'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="brand" href="index.html"><span class="mark">L</span>Luca Tools</a>
+<nav class="links">
+<a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="download.html">Download</a><a class="on" href="installation.html">Installation</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a>
+</nav>
+</div>
+</header>
+<main class="wrap">
+<div class="ph">
+<div class="lbl">Anleitung</div>
+<h1>Installation</h1>
+<p class="lead">Die Erweiterung wird als entpackter Ordner geladen. Das ist der offizielle Weg für ZIP-Verteilung in Chrome.</p>
+</div>
+<ol class="steps">
+<li>ZIP auf der Download-Seite speichern.</li>
+<li>Rechtsklick auf die Datei → <code>Alle extrahieren</code>. Unter macOS genügt ein Doppelklick. Der Ordner muss danach bestehen bleiben.</li>
+<li>Adresszeile öffnen, <code>chrome://extensions</code> eingeben.<button class="cp" onclick="copy('chrome://extensions')">copy</button></li>
+<li>Oben rechts <code>Entwicklermodus</code> aktivieren.</li>
+<li><code>Entpackte Erweiterung laden</code> anklicken und den entpackten Ordner auswählen.</li>
+<li>Icon in der Toolbar öffnen, Funktionen einschalten.</li>
+</ol>
+<h2>Hinweise</h2>
+<p>Wird der Ordner gelöscht oder verschoben, verliert Chrome die Erweiterung. Lege ihn also an eine Stelle, die bleibt.</p>
+<p>Updates laufen identisch: neues ZIP entpacken, alten Ordner ersetzen, in <code>chrome://extensions</code> auf „Aktualisieren" klicken.</p>
+<div class="note">Edge und Brave funktionieren genauso. Beide laden entpackte Erweiterungen über die gleiche Seite.</div>
+</main>
+<footer>
+<div class="wrap">
+<div class="fb"><div>Kein offizielles Epic-Produkt.</div><nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav></div>
+<div class="cr"><span>© 2026 Luca</span><span>created by <b>Luca</b></span></div>
+</div>
+</footer>
+<script>
+const T=document.createElement('div');
+T.className='toast';document.body.appendChild(T);
+function copy(t){navigator.clipboard?.writeText(t).then(()=>{T.textContent='kopiert';T.classList.add('on');setTimeout(()=>T.classList.remove('on'),1800)})}
+</script>
+</body>
+</html>
